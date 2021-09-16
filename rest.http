@@ -1,0 +1,36 @@
+GET http://localhost:3001/ 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MzE4MDM4MTIsImV4cCI6MTYzMTgwMzg3MiwiYXVkIjoiNjE0MzU5MTY3MDU3N2Y3NzliOGMzNWNjIiwiaXNzIjoibW15d2Vic2l0ZWt0aC5jb20ifQ.NTcOf_LGe8KKJhNY1uVK2ziXMRkE1xBkR-SII3i8B50
+
+###
+POST http://localhost:3001/auth/register  
+Content-Type: application/json
+
+{
+    "email": "admin@example.com",
+    "password": "password"
+}
+
+###
+POST http://localhost:3001/auth/login  
+Content-Type: application/json
+
+{
+    "email": "admin@example.com",
+    "password": "password"
+}
+
+###
+POST http://localhost:3001/auth/refresh-token  
+Content-Type: application/json
+
+{
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MzE4MTIxOTEsImV4cCI6MTY2MzM2OTc5MSwiYXVkIjoiNjE0MzU5MTY3MDU3N2Y3NzliOGMzNWNjIiwiaXNzIjoibW15d2Vic2l0ZWt0aC5jb20ifQ.Dlj5l4FXTHpehsB8NCbA3H3HUDY1QtXeauoHjOl1aq8"
+}
+
+###
+DELETE http://localhost:3001/auth/logout 
+Content-Type: application/json
+
+{
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MzE4MTE5NzEsImV4cCI6MTY2MzM2OTU3MSwiYXVkIjoiNjE0MzU5MTY3MDU3N2Y3NzliOGMzNWNjIiwiaXNzIjoibW15d2Vic2l0ZWt0aC5jb20ifQ.xL5_y3SjwdX_R4DEyYc9zI6bzR_UMb81vpUSzXiWmoE"
+}
